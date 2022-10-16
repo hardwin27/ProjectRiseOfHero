@@ -8,4 +8,6 @@ public class CharacterEntity : MonoBehaviour
 
     private bool _canMove;
     private bool _isMoving;
+
+    public CharacterData Data { get { return _data; } }
 }

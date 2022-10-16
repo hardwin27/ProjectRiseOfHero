@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CharacterData : ScriptableObject
 {
-    [SerializeField] private float _characterHealth;
-    [SerializeField] private float _characterSpeed;
+    [SerializeField] private float _baseHealth;
+    [SerializeField] private float _baseSpeed;
 
-    public float CharacterHealth { get { return _characterHealth; } }
-    public float CharacterSpeed { get { return _characterSpeed; } }
-
-
+    public float BaseHealth { get { return _baseHealth; } }
+    public float BaseSpeed { get { return _baseSpeed; } }
 }
