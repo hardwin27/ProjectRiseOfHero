@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private CharacterBrain _characterBrain;
+
+    private void Update()
     {
-        
+        MovementInputHandler();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void MovementInputHandler()
     {
-        
+        _characterBrain.SetMovementDirection(Input.GetAxisRaw("Horizontal"));
     }
 }

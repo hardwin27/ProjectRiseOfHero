@@ -6,8 +6,19 @@ public class CharacterEntity : MonoBehaviour
 {
     [SerializeField] private CharacterData _data;
 
-    private bool _canMove;
-    private bool _isMoving;
+    private float _currentHealth;
+    private float _maxHealth;
 
     public CharacterData Data { get { return _data; } }
+
+    private void Awake()
+    {
+        SetInitialStats();
+    }
+
+    private void SetInitialStats()
+    {
+        _maxHealth = Data.BaseHealth;
+        _currentHealth = _maxHealth;
+    }
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CharacterBrain : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private CharacterEntity _entity;
+    [SerializeField] private CharacterMovement _movement;
+
+    /*public CharacterEntity Entity { get { return _entity; } }
+    public CharacterMovement Movement { get { return _movement; } }*/
+
+    public void SetMovementDirection(float moveDir)
     {
-        
+        _movement.SetMoveDirection(moveDir);
     }
 }
